@@ -21,6 +21,7 @@
         <guava-version>28.0-jre</guava-version>
         <jackson-version>2.11.0</jackson-version>
         <slf4j-version>1.7.25</slf4j-version>
+        <project-version>2.2.1.RELEASE</project-version>
     </properties>
 
     <dependencyManagement>
@@ -46,20 +47,17 @@
                 <version>${slf4j-version}</version>
             </dependency>
             <dependency>
-                <groupId></groupId>
-                <artifactId></artifactId>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-dubbo</artifactId>
+                <version>${project-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+                <version>${project-version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
     <modules>
         <module>sample-api</module>
