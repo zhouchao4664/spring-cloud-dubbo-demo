@@ -15,9 +15,9 @@ public class ComsumerController {
     @Reference
     ISayHelloService sayHelloService;
 
-    @GetMapping
-    public String say(String msg){
-        return sayHelloService.sayHello(msg);
+    @GetMapping("say")
+    public String say(){
+        return sayHelloService.sayHello("Dubbo");
     }
 
 }
